@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="itens">
+          <h1>Calculadora</h1>
+          <!-- Este é o campo de entrada que será usado para mostrar números e resultados. -->
+          <div class="input-container">
+            <button class="limpar btn" onclick="limpar()">C</button>
+            <input readonly='true' type="text" name="" id="input" value="" onkeypress="conta()">
+          </div>
+          <!-- Aqui estão os botões que os usuários clicarão para inserir números e operadores. Cada botão tem um evento `onclick` que chama funções JavaScript para atualizar o campo de entrada. -->
+          <div class="btn-container">
+            <button class="btn" onclick="add(0)">0</button>
+            <button class="btn" onclick="add(1)">1</button>
+            <button class="btn" onclick="add(2)">2</button>
+            <button class="operador btn" onclick="add('+')">+</button>
+            <button class="btn" onclick="add(3)">3</button>
+            <button class="btn" onclick="add(4)">4</button>
+            <button class="btn" onclick="add(5)">5</button>
+            <button class="operador btn" onclick="add('-')">-</button>
+            <button class="btn" onclick="add(6)">6</button>
+            <button class="btn" onclick="add(7)">7</button>
+            <button class="btn" onclick="add(8)">8</button>
+            <button class="operador btn" onclick="add('/')">÷</button>
+            <button class="btn" onclick="add(9)">9</button>
+            <button class="btn" onclick="add('.')">.</button>
+            <!-- Este botão chama a função `conta()` quando clicado para calcular o resultado. -->
+            <button class="calcular btn" onclick="conta()">=</button>
+            <button class="operador btn" onclick="add('*')">x</button>
+          </div>
+        </div>
+      </div>
+      <!-- Esta linha vincula o arquivo JavaScript `javascript.js` ao seu documento HTML, permitindo que os scripts JavaScript sejam executados. -->
+      <script src="javascript.js"></script>
+</body>
+</html>
